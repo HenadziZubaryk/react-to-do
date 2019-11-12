@@ -13,10 +13,8 @@ const Container = styled.div`
 
 function App() {
   return <div className="wrapper">
-    <Container>
-       
-    </Container>
-  </div>;
+    
+  </div>
 }
 
 export default App;
