@@ -11,9 +11,18 @@ const Container = styled.div`
   transform: translate(-50%, -50%);
 `;
 
+const Header = styled.h1`
+  margin: 0 0 5em 0;
+  text-align: center;
+  font-size: 1em;
+  color: ${ colors.black };
+`;
+
 function App() {
   return <div className="wrapper">
-    
+      <Header>
+        <h1>React-To-Do</h1>
+      </Header>
   </div>
 }
 
