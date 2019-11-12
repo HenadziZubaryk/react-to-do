@@ -1,10 +1,11 @@
-## React-To-Do
+React-To-Do
+=======================
 
-## Available Scripts
-
-In the project directory, you can run:
+Usage
+-----
 
 ### `npm start`
+Install Node modules listed in ./package.json`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### `npm start`
+Runs the webpack build system with HMR. Webpack dev server can be found at `localhost:3000`.
