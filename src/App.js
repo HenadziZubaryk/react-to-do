@@ -25,7 +25,6 @@ const Buttons = styled.button`
   cursor: pointer;
   width: 125px;
   height: 50px;
-
   border-radius: 1em 0 0 1em;
   position: relative;
 
@@ -76,7 +75,8 @@ const TextArea = styled.textarea`
   border-radius: 1em;
   height: 82px;
   margin: 1.5em 0;
-  resize: none; 
+  resize: none;
+  overflow-y: hidden; 
 `;
 const Row = styled.div`
   display: inline-flex;
