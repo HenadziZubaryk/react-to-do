@@ -25,6 +25,7 @@ const Buttons = styled.button`
   cursor: pointer;
   width: 125px;
   height: 50px;
+
   border-radius: 1em 0 0 1em;
   position: relative;
 
@@ -64,7 +65,6 @@ const Input = styled.input`
   background: ${ colors.lightBlue };
   color: ${ colors.lightBlack };
   padding: 1.5em; 
-  width: auto;
   cursor: text;
   border-radius: 1em;
 `;
@@ -74,7 +74,6 @@ const TextArea = styled.textarea`
   padding: 1.5em;  
   cursor: text;
   border-radius: 1em;
-  width: auto;
   height: 82px;
   margin: 1.5em 0;
   resize: none; 
