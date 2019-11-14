@@ -14,23 +14,20 @@ const Container = styled.div`
 const Header = styled.h1`
   margin: 0 0 2em 0;
   text-align: center;
-  font-size: 2em;
+  font-size: 24px;
   color: ${ colors.black };
 `;
 
 const Buttons = styled.button`
-  border: 0;
   background: ${ colors.lightYellow };
   color: ${ colors.yellow };
-  padding: 1em 1em 1em 2em;
-  font-size: 12px;
-  font-weight: bold;
+  padding: 1em 1em 1em 2em;  
   cursor: pointer;
   width: 125px;
   height: 50px;
-  white-space: normal;
   border-radius: 1em 0 0 1em;
   position: relative;
+
   :before {
     content: "";
     position: absolute;
@@ -42,56 +39,44 @@ const Buttons = styled.button`
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
   }
+  
   ${props => 
     props.largeButton &&
       css`
         width: 285px;
-        margin-top: 1.5em;        
+        margin: 1.5em 0 0 0;        
       `}
 `;
 
 const ItemList = styled.button`
-  border: 0;
   background: ${ colors.lightBlue };
   color: ${ colors.blue };
-  padding: 1em 2em;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: bold;
+  padding: 1.5em 2em; 
   cursor: pointer;
-  width: auto;
-  height: auto;
-  white-space: normal;
   border-radius: 1em;
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em 0;
+  
   :hover {
     background: ${ colors.hoverBlue };
   }
 `;
 const Input = styled.input`
-  border: 0;
   background: ${ colors.lightBlue };
   color: ${ colors.lightBlack };
-  padding: 1.5em;
-  font-size: 12px;
-  font-weight: bold;
+  padding: 1.5em; 
   width: auto;
-  cursor: pointer;
+  cursor: text;
   border-radius: 1em;
 `;
 const TextArea = styled.textarea`
-  border: 0;
   background: ${ colors.lightBlue };
   color: ${ colors.lightBlack };
-  padding: 1.5em;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
+  padding: 1.5em;  
+  cursor: text;
   border-radius: 1em;
   width: auto;
   height: 82px;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin: 1.5em 0;
   resize: none; 
 `;
 const Row = styled.div`
@@ -106,8 +91,7 @@ const ColumnSecond = styled.div`
   display: flex;
   flex-direction: column;
   width: 140px;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin: 0 2em;
 `;
 const ColumnThird = styled.div`
   display: flex;
@@ -116,31 +100,33 @@ const ColumnThird = styled.div`
 `;
 
 function App() {
-  return <div className="wrapper">
-    <Container>
-      <Header>React-To-Do</Header>
-      <Row>
-        <ColumnFirst>
-          <ItemList>Учеба</ItemList>
-          <ItemList>Вождение</ItemList>
-          <ItemList>Работа</ItemList>
-          <Buttons>Добавить категорию</Buttons>
-        </ColumnFirst>
-        <ColumnSecond>
-          <ItemList>ГАИ</ItemList>
-          <ItemList>Внутренний экзамен</ItemList>
-          <Buttons>Добавить заметку</Buttons>          
-        </ColumnSecond>
-        <ColumnThird>
-          <Input placeholder="Введите заголовок" type="text" />
-          <TextArea placeholder="Введите текст" type="text"></TextArea>
-          <Input placeholder="Введите пароль" type="password" />
-          <Buttons largeButton>Encrypt</Buttons>
-          <Buttons largeButton onclick="saveNote()">Сохранить</Buttons>
-        </ColumnThird>
-      </Row>  
-    </Container>     
-  </div>
+  return (
+    <div>
+      <Container>
+        <Header>React-To-Do</Header>
+        <Row>
+          <ColumnFirst>
+            <ItemList>Учеба</ItemList>
+            <ItemList>Вождение</ItemList>
+            <ItemList>Работа</ItemList>
+            <Buttons>Добавить категорию</Buttons>
+          </ColumnFirst>
+          <ColumnSecond>
+            <ItemList>ГАИ</ItemList>
+            <ItemList>Внутренний экзамен</ItemList>
+            <Buttons>Добавить заметку</Buttons>          
+          </ColumnSecond>
+          <ColumnThird>
+            <Input placeholder="Введите заголовок" type="text" />
+            <TextArea placeholder="Введите текст" type="text"></TextArea>
+            <Input placeholder="Введите пароль" type="password" />
+            <Buttons largeButton>Encrypt</Buttons>
+            <Buttons largeButton>Сохранить</Buttons>
+          </ColumnThird>
+        </Row>  
+      </Container>     
+    </div>
+  );
 }
 
 export default App;
