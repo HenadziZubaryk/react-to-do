@@ -9,6 +9,9 @@ const Container = styled.div`
   top: 50%;
   height: auto;
   transform: translate(-50%, -50%);
+  border-radius: 1.5em;
+  box-shadow: 1px 2px 20px ${ colors.gray };
+  padding: 5em;
 `;
 
 const Header = styled.h1`
