@@ -24,7 +24,7 @@ const Header = styled.h1`
 const Buttons = styled.button`
   background: ${ colors.lightYellow };
   color: ${ colors.yellow };
-  padding: 1em 1em 1em 2em;  
+  padding: 1em 1em 1em 2em;
   cursor: pointer;
   width: 125px;
   height: 50px;
@@ -42,59 +42,65 @@ const Buttons = styled.button`
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
   }
-  
-  ${props => 
+
+  ${props =>
     props.largeButton &&
       css`
         width: 285px;
-        margin: 1.5em 0 0 0;        
-      `}
+        margin: 1.5em 0 0 0;
+  `}
 `;
 
 const ItemList = styled.button`
   background: ${ colors.lightBlue };
   color: ${ colors.blue };
-  padding: 1.5em 2em; 
+  padding: 1.5em 2em;
   cursor: pointer;
   border-radius: 1em;
   margin: 0 0 1.5em 0;
-  
+
   :hover {
     background: ${ colors.hoverBlue };
   }
 `;
+
 const Input = styled.input`
   background: ${ colors.lightBlue };
   color: ${ colors.lightBlack };
-  padding: 1.5em; 
+  padding: 1.5em;
   cursor: text;
   border-radius: 1em;
 `;
+
 const TextArea = styled.textarea`
   background: ${ colors.lightBlue };
   color: ${ colors.lightBlack };
-  padding: 1.5em;  
+  padding: 1.5em;
   cursor: text;
   border-radius: 1em;
   height: 82px;
   margin: 1.5em 0;
   resize: none;
-  overflow-y: hidden; 
+  overflow-y: hidden;
 `;
+
 const Row = styled.div`
   display: inline-flex;
 `;
+
 const ColumnFirst = styled.div`
   display: flex;
   flex-direction: column;
   width: 140px;
 `;
+
 const ColumnSecond = styled.div`
   display: flex;
   flex-direction: column;
   width: 140px;
   margin: 0 2em;
 `;
+
 const ColumnThird = styled.div`
   display: flex;
   flex-direction: column;
@@ -116,7 +122,7 @@ function App() {
           <ColumnSecond>
             <ItemList>ГАИ</ItemList>
             <ItemList>Внутренний экзамен</ItemList>
-            <Buttons>Добавить заметку</Buttons>          
+            <Buttons>Добавить заметку</Buttons>
           </ColumnSecond>
           <ColumnThird>
             <Input placeholder="Введите заголовок" type="text" />
@@ -125,8 +131,8 @@ function App() {
             <Buttons largeButton>Encrypt</Buttons>
             <Buttons largeButton>Сохранить</Buttons>
           </ColumnThird>
-        </Row>  
-      </Container>     
+        </Row>
+      </Container>
     </div>
   );
 }
