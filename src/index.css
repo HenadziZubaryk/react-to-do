@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
   border: none;
-  font-size: 12px;
+  font: 12px -apple-system, system-ui, sans-serif;
   font-weight: bold;
   list-style: none;
   outline: none;
-  font-family: -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
